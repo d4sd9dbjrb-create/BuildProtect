@@ -1,0 +1,21 @@
+name: BuildProtect
+version: 1.0.0
+main: com.novysvet.buildprotect.BuildProtect
+api-version: 1.21
+author: NovySvet Team
+description: Система привата блоков для летающих баз
+
+commands:
+  p:
+    description: Управление защитой блоков
+    aliases: [protect, bp]
+    usage: /p [on|off|trust|untrust|info|status]
+    permission: buildprotect.use
+
+permissions:
+  buildprotect.use:
+    description: Использование команд плагина
+    default: true
+  buildprotect.admin:
+    description: Администрирование плагина
+    default: op

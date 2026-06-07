@@ -1,0 +1,36 @@
+# BuildProtect Configuration
+
+# Автоматически включать режим защиты при входе
+auto-enable-on-join: false
+
+# Максимум доверенных игроков на одного владельца
+max-trusted-players: 10
+
+# Защищать рамки с предметами
+protect-item-frames: true
+
+# Защищать стойки для брони
+protect-armor-stands: true
+
+# Уведомления при попытке сломать чужой блок
+notify-on-break-attempt: true
+
+# Уведомления при установке блока
+notify-on-place: false
+
+# Звуки
+sounds:
+  enable: true
+  protect-on: "ENTITY_PLAYER_LEVELUP"
+  protect-off: "BLOCK_NOTE_BLOCK_PLING"
+  break-denied: "ENTITY_VILLAGER_NO"
+
+# База данных
+database:
+  type: "json"  # sqlite или json
+  sqlite-file: "plugins/BuildProtect/blocks.db"
+  json-file: "plugins/BuildProtect/blocks.json"
+
+# Автоочистка старых блоков (дни)
+# Если игрок не заходил N дней — его блоки становятся общими
+auto-cleanup-days: 0  # 0 = отключено
